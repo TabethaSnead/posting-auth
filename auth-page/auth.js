@@ -5,8 +5,13 @@ const signInForm = document.getElementById('signInForm');
 
 signUpForm.addEventListener('submit', async (e) => {
     e.preventDefault();
+
     const data = new FormData(signUpForm);
-    await signUpUser(data.get('email'), data.get('password'));
+    const res = await signUpUser(data.get('email'), data.get('password'));
+    if (res.error) {
+        alert(res.error.message);
+    }
+    console.log(res);
     redirectIfLoggedIn();
 });
 

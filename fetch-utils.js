@@ -39,3 +39,16 @@ export async function logout() {
 
     return response.error;
 }
+
+export async function getAllCreatedPosts() {
+    const { data, error } = await client.from('posts').select('*');
+    return data;
+}
+
+export async function insertFormData(titleStr, contentStr, contactStr) {
+    // const postObj = [{ title: titleStr, content: contentStr, contact: contactStr }];
+    // {title: 'whatever', content: 'text', contact: 'moretext'}
+    await client
+        .from('posts')
+        .insert([{ title: titleStr, content: contentStr, contact: contactStr }]);
+}
