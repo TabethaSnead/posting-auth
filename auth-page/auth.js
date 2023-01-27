@@ -11,7 +11,6 @@ signUpForm.addEventListener('submit', async (e) => {
     if (res.error) {
         alert(res.error.message);
     }
-    console.log(res);
     redirectIfLoggedIn();
 });
 

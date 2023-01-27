@@ -5,7 +5,9 @@ const SUPABASE_KEY =
 const client = supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
 export async function getUser() {
-    return client.auth.session() && client.auth.session().user;
+    const res = (await client.auth.session()) && (await client.auth.session().user);
+    console.log('res', res);
+    return res;
 }
 
 export async function signUpUser(email, password) {
@@ -35,7 +37,7 @@ export async function redirectIfLoggedIn() {
 }
 
 export async function logout() {
-    const response = await client.auth.signout();
+    const response = await client.auth.signOut();
 
     return response.error;
 }

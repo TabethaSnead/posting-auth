@@ -15,15 +15,26 @@ window.addEventListener('load', async () => {
     const allPostsData = await getAllCreatedPosts();
     posts = allPostsData;
     displayAllPosts();
+    if (await getUser()) {
+        loginButton.textContent = 'logout';
+    } else {
+        loginButton.textContent = 'login';
+    }
 });
 
 loginButton.addEventListener('click', async () => {
+    if (await getUser()) {
+        logout();
+    }
+    if (await checkAuth()) {
+        window.location.href = '../create-page';
+    }
     window.location.href = '../auth-page';
 });
 
 createButton.addEventListener('click', async () => {
-    if (getUser()) window.location.href = '../create-page';
-    if (!getUser()) window.location.href = '../auth-page';
+    if (await getUser()) window.location.href = '../create-page';
+    if (!(await getUser())) window.location.href = '../auth-page';
 });
 
 /* Display Functions */
