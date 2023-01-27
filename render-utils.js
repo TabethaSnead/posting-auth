@@ -5,6 +5,9 @@ export function renderpostCard(post) {
     const contact = document.createElement('div');
 
     div.classList.add('createdPosts');
+    title.classList.add('titleEl');
+    content.classList.add('contentEl');
+    contact.classList.add('contactEl');
 
     title.textContent = post.title;
     content.textContent = post.content;
