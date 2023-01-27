@@ -15,3 +15,7 @@ createPostsForm.addEventListener('submit', async (e) => {
     console.log(title, content, contact);
     await insertFormData(title, content, contact);
 });
+
+goHomeButton.addEventListener('click', () => {
+    window.location.href = '../';
+});

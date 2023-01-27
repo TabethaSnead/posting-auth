@@ -1,6 +1,6 @@
 /* Imports */
 
-import { checkAuth, logout, getAllCreatedPosts } from './fetch-utils.js';
+import { checkAuth, logout, getAllCreatedPosts, getUser } from './fetch-utils.js';
 import { renderpostCard } from './render-utils.js';
 
 /* Get DOM Elements */
@@ -22,7 +22,8 @@ loginButton.addEventListener('click', async () => {
 });
 
 createButton.addEventListener('click', async () => {
-    if (checkAuth()) window.location.href = '../create-page';
+    if (getUser()) window.location.href = '../create-page';
+    if (!getUser()) window.location.href = '../auth-page';
 });
 
 /* Display Functions */

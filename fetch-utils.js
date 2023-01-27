@@ -50,5 +50,5 @@ export async function insertFormData(titleStr, contentStr, contactStr) {
     // {title: 'whatever', content: 'text', contact: 'moretext'}
     await client
         .from('posts')
-        .insert([{ title: titleStr, content: contentStr, contact: contactStr }]);
+        .insert({ title: titleStr, content: contentStr, contact: contactStr });
 }
