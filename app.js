@@ -44,9 +44,7 @@ async function displayAllPosts(post) {
     for (let post of posts) {
         const postCards = renderpostCard(post);
         addedContent.append(postCards);
-        console.log(postCards);
     }
 }
 
 // (don't forget to call any display functions you want to run on page load!)
-displayAllPosts();
