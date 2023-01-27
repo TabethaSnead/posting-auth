@@ -1,3 +1,30 @@
 body {
-    background-color: green;
+    background-color: rgb(52, 93, 52);
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    background-color: rgb(68, 88, 44);
+    width: 800px;
+    height: 500px;
+    color: rgba(255, 255, 255, 0.434);
+    padding: 20px;
+    border: solid 2px black;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+input {
+    margin: 40px;
+    padding: 20px;
+    word-wrap: normal;
+}
+
+textarea {
+    width: 400px !important;
+}
+#goHomeButton {
+    height: 25px;
 }
