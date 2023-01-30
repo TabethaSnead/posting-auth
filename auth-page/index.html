@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.7/dist/umd/supabase.min.js"
+        ></script>
+        <script type="module" src="auth.js"></script>
+        <link rel="stylesheet" href="auth.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="signUpDiv">
+            <div class="authContainer">
+                <h2>Sign Up</h2>
+                <form id="signUpForm">
+                    <div>
+                        <label for="sign-up-email">Email</label>
+                        <input required type="email" name="email" id="sign-up-email" />
+                    </div>
+                    <div>
+                        <span>Password must include at least 6 characters</span>
+                        <br />
+                        <label for="sign-up-password">Password</label>
+                        <input
+                            required
+                            autocomplete="new-password"
+                            name="password"
+                            id="sign-up-password"
+                            type="password"
+                        />
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+        <div class="signInDiv">
+            <div class="authContainer">
+                <h2>Sign In</h2>
+                <form id="signInForm">
+                    <div>
+                        <label for="sign-in-email">Email </label>
+                        <input
+                            required
+                            autocomplete="email"
+                            type="email"
+                            name="email"
+                            id="sign-in-email"
+                        />
+                    </div>
+                    <div>
+                        <label for="sign-in-password">Password</label>
+                        <input
+                            required
+                            autocomplete="current-password"
+                            type="password"
+                            name="password"
+                            id="sign-in-password"
+                        />
+                    </div>
+                    <button type="submit">Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

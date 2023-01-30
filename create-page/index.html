@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script
+            defer
+            src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@1.35.7/dist/umd/supabase.min.js"
+        ></script>
+        <script type="module" src="create.js"></script>
+        <link rel="stylesheet" href="create.css" />
+    </head>
+    <body>
+        <button id="goHomeButton">Go To Display Posts Page</button>
+        <main id="create-posts-div">
+            <h2>Create A Post</h2>
+            <form id="create-posts-form">
+                <div class="titleDiv">
+                    <label class="title-label">Title</label>
+                    <input name="title" id="title-input" />
+                </div>
+                <div class="contentDiv">
+                    <label class="content-label">Content</label>
+                    <textarea type="text" name="content" id="content-input"></textarea>
+                </div>
+                <div class="contactDiv">
+                    <label class="contact-label">Contact Information</label>
+                    <input name="contact" id="contact-input" />
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </main>
+    </body>
+</html>
